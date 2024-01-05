@@ -10,18 +10,19 @@ clients = []
 ids = []
 
 if API_ID:
-   API_ID = 
+   API_ID = 20112715
 else:
    print("WARNING: API ID NOT FOUND !!")  
 
 if API_HASH:
-   API_HASH = ""
+   API_HASH = "fe56c4634729f7c557b3298f0bb0cf1e"
 else:
    print("WARNING: API HASH NOT FOUND !!")      
 
 
+STRING_SESSION1 = ""
 
-if STRING_SESSION1:
+if STRING_SESSION1:   
    print("Client1: Found.. Starting..📳")
    client1 = Client(name="one", api_id=API_ID, api_hash=API_HASH, session_string=STRING_SESSION1, plugins=dict(root="VGS/modules"))
    clients.append(client1)
