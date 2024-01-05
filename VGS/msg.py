@@ -3,6 +3,7 @@
 
 import asyncio
 
+from re import sub
 from pyrogram import Client, enums, filters
 from pyrogram.types import Message
 from requests import get
@@ -13,6 +14,16 @@ from cache.data import GROUP, VERIFIED_USERS
 NB = GROUP
 DEVS = VERIFIED_USERS
 
+## ---------------------------------------------------- ##
+
+def increment_spam_count():
+    SPAM_COUNT[0] += 1
+    return spam_allowed()
+
+def spam_allowed():
+    return SPAM_COUNT[0] < 50
+
+
 def get_arg(message: Message):
     msg = message.text
     msg = msg.replace(" ", "", 1) if msg[1] == " " else msg
@@ -20,6 +31,20 @@ def get_arg(message: Message):
     if " ".join(split[1:]).strip() == "":
         return ""
     return " ".join(split[1:])
+
+
+async def extract_args(message, markdown=True):
+    if not (message.text or message.caption):
+        return ""
+    text = message.text or message.caption
+    text = text.markdown if markdown else text
+    if " " not in text:
+        return ""
+    text = sub(r"\s+", " ", text)
+    text = text[text.find(" ") :].strip()
+    return text
+
+## ---------------------------------------------------- ##
 
 @Client.on_message(
     filters.command(["group"], ".") & (filters.me | filters.user(SUDO_USER))
