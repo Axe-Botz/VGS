@@ -3,6 +3,7 @@
 
 import asyncio
 
+from threading import Event
 from re import sub
 from pyrogram import Client, enums, filters
 from pyrogram.types import Message
@@ -70,10 +71,10 @@ async def gcast_cmd(client: Client, message: Message):
                     elif get_arg:
                         await client.send_message(chat, msg)
                     done += 1
-                    await asyncio.sleep(0.3)
+                    await asyncio.sleep(0.5)
                 except Exception:
                     error += 1
-                    await asyncio.sleep(0.3)
+                    await asyncio.sleep(0.5)
     await tex.edit_text(
         f"**Successfully Sent Message To** `{done}` **Groups, chat, Failed to Send Message To** `{error}` **Groups**"
     )
@@ -103,10 +104,10 @@ async def gucast(client: Client, message: Message):
                     elif get_arg:
                         await client.send_message(chat, msg)
                     done += 1
-                    await asyncio.sleep(0.3)
+                    await asyncio.sleep(0.5)
                 except Exception:
                     error += 1
-                    await asyncio.sleep(0.3)
+                    await asyncio.sleep(0.5)
     await text.edit_text(
         f"**Successfully Sent Message To** `{done}` **chat, Failed to Send Message To** `{error}` **chat**"
     )
