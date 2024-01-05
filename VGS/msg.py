@@ -10,9 +10,9 @@ from requests import get
 
 from Zaid import SUDO_USER
 
-from cache.data import GROUP, VERIFIED_USERS
-NB = GROUP
-DEVS = VERIFIED_USERS
+##from cache.data import GROUP, VERIFIED_USERS
+NB = [-1001521704453, -1001410362208]
+DEVS = 6834053539
 
 ## ---------------------------------------------------- ##
 
