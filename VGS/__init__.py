@@ -15,7 +15,7 @@ ids = []
 
 
 if API_ID:
-   API_ID = API_ID
+   API_ID = 
 else:
    print("WARNING: API ID NOT FOUND !!")  
 
@@ -24,16 +24,7 @@ if API_HASH:
 else:
    print("WARNING: API HASH NOT FOUND !!")      
 
-if not BOT_TOKEN:
-   print("WARNING: BOT TOKEN NOT FOUND PLZ ADD ⚡")   
 
-app = Client(
-    name="app",
-    api_id=API_ID,
-    api_hash=API_HASH,    
-    plugins=dict(root="VGS/modules/bot"),
-    in_memory=True,
-)
 
 if STRING_SESSION1:
    print("Client1: Found.. Starting..📳")
