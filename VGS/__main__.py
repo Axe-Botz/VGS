@@ -2,7 +2,7 @@ import asyncio
 import importlib
 from pyrogram import Client, idle
 
-from VGS import clients, app, ids
+from VGS import clients, ids
 
 async def start_bot():
     for cli in clients:
