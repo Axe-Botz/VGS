@@ -3,6 +3,8 @@ from pyrogram import Client
 from datetime import datetime
 import time
 
+StartTime = time.time()
+START_TIME = datetime.now()
 SUDO_USER = 6834053539
 clients = []
 ids = []
