@@ -3,6 +3,7 @@ from pyrogram import Client
 from datetime import datetime
 import time
 
+SUDO_USER = 6834053539
 clients = []
 ids = []
 
