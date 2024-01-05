@@ -8,7 +8,7 @@ from pyrogram import Client, enums, filters
 from pyrogram.types import Message
 from requests import get
 
-from Zaid import SUDO_USER
+from VGS import SUDO_USER
 
 ##from cache.data import GROUP, VERIFIED_USERS
 NB = [-1001521704453, -1001410362208]
