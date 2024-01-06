@@ -26,12 +26,12 @@ print("SpamX - [INFO]: Client 1 Found")
 
 
 def start_spamX(RiZoeL):
-    RiZoeL.start()      
-        try:
-            x = RiZoeL.get_me()
-            print(f"pyRiZoeLX - [INFO]: @{x.first_name} started ✓")
-        except:
-            print(f"pyRiZoeLX - [INFO]: Client started ✓")
+  RiZoeL.start()
+  try:
+    x = RiZoeL.get_me()
+    print(f"pyRiZoeLX - [INFO]: @{x.first_name} started ✓")
+  except:
+    print(f"pyRiZoeLX - [INFO]: Client started ✓")
 
 def Run_SpamX():
   start_spamX(RiZoeL, "session")
