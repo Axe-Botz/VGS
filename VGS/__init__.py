@@ -20,6 +20,16 @@ userbot = Client(
   plugins=dict(root="VGS/modules")
 )
 
-userbot.start()
+async def startbot():
+    await userbot.start()
+    getme = await userbot.get_me()
+    BOT_ID = getme.id
+    BOT_USERNAME = getme.username
+    if getme.last_name:
+        BOT_NAME = getme.first_name + " " + getme.last_name
+    else:
+        BOT_NAME = getme.first_name
 
 
+loop = asyncio.get_event_loop()
+loop.run_until_complete(startbot())
