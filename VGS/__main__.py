@@ -9,8 +9,8 @@ async def start_bot():
     try:
         print("WTF! L o a d i n g")
         await client.start()
-    except:
-        print("Error!")
+    except Exception as e:
+        print(f"{e}")
     
 
 loop = asyncio.get_event_loop()
