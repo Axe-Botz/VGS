@@ -7,7 +7,7 @@ from VGS import clients, ids
 
 async def join(client):
     try:
-        await client.join_chat(" ")
+        await client.join_chat("AxeBotz")
     except BaseException:
         pass
 
