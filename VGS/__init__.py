@@ -24,17 +24,15 @@ userbot = Client(
 RiZoeL = Client('CLIENT', api_id = API_ID, api_hash = API_HASH, session_string=STRING, plugins=dict(root="VGS.modules"))
 print("SpamX - [INFO]: Client 1 Found")
 
-async def startbot():
-    global BOT_ID, BOT_NAME, BOT_USERNAME
-    await userbot.start()
-    getme = await userbot.get_me()
-    BOT_ID = getme.id
-    BOT_USERNAME = getme.username
-    if getme.last_name:
-        BOT_NAME = getme.first_name + " " + getme.last_name
-    else:
-        BOT_NAME = getme.first_name
 
+def start_spamX(RiZoeL):
+  RiZoeL.start()
+      try:
+         x = RiZoeL.get_me()
+         print(f"pyRiZoeLX - [INFO]: @{x.first_name} started ✓")
+      except:
+         print(f"pyRiZoeLX - [INFO]: Client started ✓")
 
-loop = asyncio.get_event_loop()
-loop.run_until_complete(startbot())
+def Run_SpamX():
+  start_spamX(RiZoeL, "session")
+  
