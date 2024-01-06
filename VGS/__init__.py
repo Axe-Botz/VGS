@@ -15,7 +15,7 @@ STRING = "BQEy5UsAR81tgVTFRwMRWNMFCIwrqXO_m7Qw-6PL5Pa5l59lVCsUtpg42zeZyW0ojJvMs0
 client = Client(
   api_id=API_ID,
   api_hash=API_HASH,
-  string_session=STRING,
+  session_name=str(STRING),
   plugins=dict(root="VGS/modules")
 )
 
