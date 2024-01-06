@@ -5,6 +5,7 @@ from random import choice
 
 
 handler = [".", "!"]
+Sudos = []
 
 async def start_dspam(RiZoeL, message, counts, delay, spam_text):
    for _ in range(counts):
