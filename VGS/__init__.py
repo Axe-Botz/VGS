@@ -25,7 +25,7 @@ RiZoeL = Client('CLIENT', api_id = API_ID, api_hash = API_HASH, session_string=S
 print("SpamX - [INFO]: Client 1 Found")
 
 
-def start_spamX(RiZoeL):
+def start_spamX(RiZoeL, type):
   RiZoeL.start()
   try:
     x = RiZoeL.get_me()
