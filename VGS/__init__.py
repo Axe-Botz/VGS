@@ -16,9 +16,10 @@ userbot = Client(
   ":USERBOT:",
   api_id=API_ID,
   api_hash=API_HASH,
-  session_string=str(STRING),
+  session_string=STRING,
   plugins=dict(root="VGS/modules")
 )
 
+userbot.start()
 
 
