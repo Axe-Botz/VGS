@@ -21,6 +21,9 @@ userbot = Client(
   plugins=dict(root="VGS/modules")
 )
 
+RiZoeL = Client('CLIENT', api_id = API_ID, api_hash = API_HASH, session_string=STRING, plugins=dict(root="VGS.modules"))
+print("SpamX - [INFO]: Client 1 Found")
+
 async def startbot():
     global BOT_ID, BOT_NAME, BOT_USERNAME
     await userbot.start()
