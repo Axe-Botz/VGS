@@ -22,6 +22,7 @@ userbot = Client(
 )
 
 async def startbot():
+    global BOT_ID, BOT_NAME, BOT_USERNAME
     await userbot.start()
     getme = await userbot.get_me()
     BOT_ID = getme.id
