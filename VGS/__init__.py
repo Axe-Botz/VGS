@@ -25,7 +25,7 @@ else:
 
 if STRING_SESSION1:   
    print("Client1: Found.. Starting..📳")
-   client1 = Client(name="one", api_id=API_ID, api_hash=API_HASH, session_string=STRING_SESSION1, plugins=dict(root="VGS/modules"))
+   client1 = Client(name="one", api_id=API_ID, api_hash=API_HASH, session_string=STRING_SESSION1, no_updates=True, plugins=dict(root="VGS/modules"))
    clients.append(client1)
 
 if STRING_SESSION2:
